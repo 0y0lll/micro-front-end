@@ -1,12 +1,21 @@
-const AppShell = () => {
+import { SidebarProvider, SidebarTrigger } from '@repo/ui/components/sidebar'
+import { ReactNode } from 'react'
+
+import { AppSidebar } from '@repo/common/components/app-sidebar'
+
+const AppShell = ({
+	children,
+}: Readonly<{ children: ReactNode }>): ReactNode => {
 	return (
-		<div>
-			<h1>header</h1>
+		<SidebarProvider>
+			<AppSidebar />
 
-			{/* {children} */}
+			<main>
+				<SidebarTrigger />
 
-			<h1>footer</h1>
-		</div>
+				{children}
+			</main>
+		</SidebarProvider>
 	)
 }
 

@@ -4,9 +4,14 @@
 		"outDir": "dist",
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./*"]
-		}
+			"@repo/common/*": ["./src/*"]
+		},
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
 	},
-	"include": ["src"],
+	"include": ["."],
 	"exclude": ["node_modules", "dist"]
 }

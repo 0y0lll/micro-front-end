@@ -1,15 +1,7 @@
+import AppShell from '@repo/common/app-shell'
 import '@repo/ui/globals.css'
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
-
-const geistSans = localFont({
-	src: './fonts/GeistVF.woff',
-	variable: '--font-geist-sans',
-})
-const geistMono = localFont({
-	src: './fonts/GeistMonoVF.woff',
-	variable: '--font-geist-mono',
-})
+import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -19,12 +11,12 @@ export const metadata: Metadata = {
 export default function RootLayout({
 	children,
 }: Readonly<{
-	children: React.ReactNode
+	children: ReactNode
 }>) {
 	return (
-		<html lang='en'>
-			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				{children}
+		<html lang="en">
+			<body>
+				<AppShell>{children}</AppShell>
 			</body>
 		</html>
 	)

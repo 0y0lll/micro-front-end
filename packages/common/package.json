@@ -1,30 +1,37 @@
 {
-	"name": "common",
+	"name": "@repo/common",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"exports": {
+		"./app-shell": "./src/shell/app-shell.tsx",
+		"./components/*": "./src/components/*.tsx"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@tailwindcss/postcss": "^4.0.11",
-		"@repo/eslint-config": "workspace:*",
-		"@repo/typescript-config": "workspace:*",
-		"@turbo/gen": "^2.4.4",
-		"@types/node": "^22.13.9",
-		"@types/react": "19.0.10",
-		"@types/react-dom": "19.0.4",
-		"eslint": "^9.21.0",
-		"typescript": "5.8.2",
+		"@repo/ui": "workspace:*",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"lucide-react": "^0.477.0",
-		"postcss": "^8.5.3",
-		"tailwind-merge": "^3.0.2",
-		"tailwindcss": "^4.0.11",
-		"tailwindcss-animate": "^1.0.7"
+		"next": "^15.1.7",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@repo/eslint-config": "workspace:*",
+		"@types/node": "^22.13.4",
+		"@types/react": "19.0.10",
+		"@types/react-dom": "19.0.4",
+		"@repo/typescript-config": "workspace:*",
+		"eslint": "^9.21.0",
+		"postcss": "^8.5.2",
+		"@tailwindcss/postcss": "^4.0.7",
+		"tailwindcss": "^4.0.7",
+		"typescript": "^5.7.3"
 	}
 }
